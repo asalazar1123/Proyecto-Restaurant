@@ -1,15 +1,34 @@
-import { AppBar, Box, Container, Typography } from "@mui/material";
+import React, { useState } from "react";
+import {
+  AppBar,
+  Box,
+  Container,
+  Typography,
+  useTheme,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  IconButton,
+} from "@mui/material";
+import { Link } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export const NavBar = () => {
+  const theme = useTheme();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <Box sx={{ width: "100%" }}>
+    <Box xl={{ width: "100%" }}>
       <AppBar
         sx={{
-          display: "flex",
           alignItems: "center",
-          borderRadius: 10,
-          marginTop: 1,
           position: "static",
+          backgroundColor: theme.palette.primary.main,
         }}
       >
         <Container
@@ -18,7 +37,7 @@ export const NavBar = () => {
             justifyContent: "space-between",
             padding: 2,
             alignItems: "center",
-            flexWrap: "wrap", // Permite que los elementos se envuelvan en pantallas pequeñas
+            flexWrap: "wrap",
           }}
         >
           <Box sx={{ alignItems: "center", display: "flex" }}>
@@ -29,23 +48,150 @@ export const NavBar = () => {
               height="100"
               style={{ objectFit: "cover", objectPosition: "center" }}
             />
-            <Typography variant="h3">Asia Bite</Typography>
+            <Typography
+              variant="h3"
+              sx={{ marginLeft: 1, color: "white" }}
+            >
+              Asia Bite
+            </Typography>
           </Box>
           <Box
             sx={{
               display: "flex",
               alignItems: "center",
-              gap: 2, // Espacio entre elementos del menú
+              gap: 2,
+              justifyContent: "center",
+              flex: 1,
             }}
           >
-            <Typography variant="h6">Inicio</Typography>
-            <Typography variant="h6">Conócenos</Typography>
-            <Typography variant="h6">Menú</Typography>
-            <Typography variant="h6">Contáctanos</Typography>
-            <Typography variant="h6">Reservas</Typography>
+            <Typography
+              variant="h6"
+              as={Link}
+              to="/"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+                display: { xs: "none", md: "block" },
+              }}
+            >
+              Inicio
+            </Typography>
+            <Typography
+              variant="h6"
+              as={Link}
+              to="/about"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+                display: { xs: "none", md: "block" },
+              }}
+            >
+              Conócenos
+            </Typography>
+            <Typography
+              variant="h6"
+              as={Link}
+              to="/menu"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+                display: { xs: "none", md: "block" },
+              }}
+            >
+              Menú
+            </Typography>
+            <Typography
+              variant="h6"
+              as={Link}
+              to="/contact"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+                display: { xs: "none", md: "block" },
+              }}
+            >
+              Contáctanos
+            </Typography>
+            <Typography
+              variant="h6"
+              as={Link}
+              to="/reservations"
+              sx={{
+                textDecoration: "none",
+                color: "white",
+                "&:hover": {
+                  textDecoration: "underline",
+                },
+                display: { xs: "none", md: "block" },
+              }}
+            >
+              Reservas
+            </Typography>
           </Box>
+          <IconButton
+            sx={{ display: { xs: "block", md: "none" } }}
+            onClick={toggleMenu}
+          >
+            <MenuIcon sx={{ color: "white" }} />
+          </IconButton>
         </Container>
       </AppBar>
+      <Drawer
+        anchor="right"
+        open={isMenuOpen}
+        onClose={toggleMenu}
+        sx={{ display: { xs: "block", md: "none" } }}
+      >
+        <List>
+          <ListItem
+            button
+            component={Link}
+            to="/"
+          >
+            <ListItemText primary="Inicio" />
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to="/about"
+          >
+            <ListItemText primary="Conócenos" />
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to="/menu"
+          >
+            <ListItemText primary="Menú" />
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to="/contact"
+          >
+            <ListItemText primary="Contáctanos" />
+          </ListItem>
+          <ListItem
+            button
+            component={Link}
+            to="/reservations"
+          >
+            <ListItemText primary="Reservas" />
+          </ListItem>
+        </List>
+      </Drawer>
     </Box>
   );
 };

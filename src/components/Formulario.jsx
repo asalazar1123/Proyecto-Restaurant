@@ -7,9 +7,9 @@ import {
   Paper,
   Container,
 } from "@mui/material";
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 export const Formulario = () => {
   const [formData, setFormData] = useState({
@@ -17,24 +17,25 @@ export const Formulario = () => {
     email: "",
     phone: "",
     message: "",
-    date: ""
+    date: "",
   });
 
   const handleChange = (e) => {
-    console.log(e.$d)
-    if (e.$d){            /* detecta si date picker viene con info */
+    console.log(e.$d);
+    if (e.$d) {
+      /* detecta si date picker viene con info */
       setFormData({
         ...formData,
-        date: e.$d,  /* debe quedar como string */
+        date: e.$d /* debe quedar como string */,
       });
-    }else{                /* guardar data restos de los campos */
+    } else {
+      /* guardar data restos de los campos */
       const { name, value } = e.target;
       setFormData({
         ...formData,
         [name]: value,
       });
     }
-    
   };
 
   const handleSubmit = (e) => {
@@ -97,12 +98,11 @@ export const Formulario = () => {
               placeholder="+ 56 9 "
             />
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-              <DatePicker                       /* con onchange se guarda fecha seleccionada */
-              
-              onChange={handleChange}
-              value={formData.date}
-              name= "date"/> 
-
+              <DatePicker /* con onchange se guarda fecha seleccionada */
+                onChange={handleChange}
+                value={formData.date}
+                name="date"
+              />
             </LocalizationProvider>
             <TextField
               label="Mensaje"

@@ -1,17 +1,35 @@
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import { Layout } from "../components/Layout/Layout";
+import { Menu } from "../views/Menu";
+import { QuienesSomos } from "../views/QuienesSomos";
+import { Portada } from "../components/Portada";
+import { Contacto } from "../views/Contacto";
 
-// export const AppRoutes = () => {
-//   return <Routes>
+export const AppRoutes = () => {
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={<Layout />}
+      >
+        <Route
+          path="/"
+          element={<Portada />}
+        />
+        <Route
+          path="/menu"
+          element={<Menu />}
+        />
+        <Route
+          path="/about"
+          element={<QuienesSomos />}
+        />
 
-//     <Routes>
-//         <Route path="/" element={#}>
-
-//             <Route path="/" element={#}/>
-//             <Route path="/menu" element={#}/>
-//             <Route path="/about" element={#}/>
-
-//         </Route>
-
-//     </Routes>
-//   </Routes>;
-// };
+        <Route
+          path="/contact"
+          element={<Contacto />}
+        />
+      </Route>
+    </Routes>
+  );
+};
