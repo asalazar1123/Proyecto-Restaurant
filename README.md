@@ -7,3 +7,8 @@ Este archivo Léame proporciona una descripción general de una aplicación web 
 Puede personalizar esta plantilla para adaptarla a las necesidades específicas de su restaurante. 
 
 ## Capturas de pantalla 📷
+
+## Contacto 
+salazaralexander2@gmail.com  📥
+nicolasgonzalezmoller@gmail.com  📥
+c.a.p.quidenao@gmail.com  📥
