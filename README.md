@@ -12,6 +12,11 @@ Asi vemos la interfaz en un primer vistazo
 
 ![GitHub](./src/assets/img/Captura1.JPG)
 
+la pagina de "Quienes somos"
+
+![GitHub](./src/assets/img/Captura2.JPG)
+
+
 ## Contacto 
 salazaralexander2@gmail.com  📥
 nicolasgonzalezmoller@gmail.com  📥
