@@ -20,6 +20,10 @@ El Menu de comidas en cuadros
 
 ![GitHub](./src/assets/img/Captura3.JPG)
 
+Y como hacer el contacto con el restaurant
+
+![GitHub](./src/assets/img/Captura4.JPG)
+
 
 
 ## Contacto 
