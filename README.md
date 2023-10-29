@@ -16,6 +16,11 @@ la pagina de "Quienes somos"
 
 ![GitHub](./src/assets/img/Captura2.JPG)
 
+El Menu de comidas en cuadros
+
+![GitHub](./src/assets/img/Captura3.JPG)
+
+
 
 ## Contacto 
 salazaralexander2@gmail.com  📥
