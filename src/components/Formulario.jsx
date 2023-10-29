@@ -97,6 +97,9 @@ export const Formulario = () => {
               required
               placeholder="+ 56 9 "
             />
+            <Container>
+              <Typography>Fecha de tu Reserva</Typography>
+            </Container>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker /* con onchange se guarda fecha seleccionada */
                 onChange={handleChange}
