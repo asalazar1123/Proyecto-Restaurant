@@ -8,6 +8,24 @@ Puede personalizar esta plantilla para adaptarla a las necesidades específicas 
 
 ## Capturas de pantalla 📷
 
+Asi vemos la interfaz en un primer vistazo
+
+![GitHub](./src/assets/img/Captura1.JPG)
+
+la pagina de "Quienes somos"
+
+![GitHub](./src/assets/img/Captura2.JPG)
+
+El Menu de comidas en cuadros
+
+![GitHub](./src/assets/img/Captura3.JPG)
+
+Y como hacer el contacto con el restaurant
+
+![GitHub](./src/assets/img/Captura4.JPG)
+
+
+
 ## Contacto 
 salazaralexander2@gmail.com  📥
 nicolasgonzalezmoller@gmail.com  📥
