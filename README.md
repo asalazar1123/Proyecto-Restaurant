@@ -8,6 +8,10 @@ Puede personalizar esta plantilla para adaptarla a las necesidades específicas 
 
 ## Capturas de pantalla 📷
 
+Asi vemos la interfaz en un primer vistazo
+
+![GitHub](./src/activos/imagen/captura1.jpg)
+
 ## Contacto 
 salazaralexander2@gmail.com  📥
 nicolasgonzalezmoller@gmail.com  📥
