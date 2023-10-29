@@ -136,9 +136,7 @@ export const NavBar = () => {
                 },
                 display: { xs: "none", md: "block" },
               }}
-            >
-              Reservas
-            </Typography>
+            ></Typography>
           </Box>
           <IconButton
             sx={{ display: { xs: "block", md: "none" } }}
