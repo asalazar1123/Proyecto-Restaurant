@@ -10,7 +10,7 @@ Puede personalizar esta plantilla para adaptarla a las necesidades específicas 
 
 Asi vemos la interfaz en un primer vistazo
 
-![GitHub](src/assets/img/Captura1.JPG
+![GitHub](./src/assets/img/Captura1.JPG
 
 ## Contacto 
 salazaralexander2@gmail.com  📥
